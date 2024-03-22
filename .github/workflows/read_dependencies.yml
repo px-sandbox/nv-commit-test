@@ -1,0 +1,16 @@
+name: Read Dependencies
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+      - prod
+      - qa
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: px-sandbox/technical-scans/.github/workflows/read_dependencies.yml@master

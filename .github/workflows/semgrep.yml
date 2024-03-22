@@ -1,0 +1,31 @@
+name: Sast Errors
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+      - prod
+      - qa
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  call-workflow:
+    uses: px-sandbox/technical-scans/.github/workflows/semgrep.yml@devops-000
+permissions:
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
