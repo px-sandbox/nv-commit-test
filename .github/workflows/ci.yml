@@ -21,6 +21,6 @@ jobs:
       excluded_jobs: docker
       test_coverage_report_directory: coverage
       run_dev_test: true
-      dev_test_branch: master
+      dev_test_branch: main
       send_test_coverage_report_to_pulse: true
       PULSE_URL: https://0bnrigh465.execute-api.eu-west-1.amazonaws.com
