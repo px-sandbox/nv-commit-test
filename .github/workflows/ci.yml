@@ -8,6 +8,12 @@ jobs:
   call-workflow:
     uses: studiographene/github-action-workflows/.github/workflows/nodejs-ci.yml@feature/PX-1850 # if you want alternatively pin to tag version version
     secrets: inherit
+    permissions:
+      discussions: write
+      issues: write
+      pull-requests: write
+      security-events: write
+      contents: read
     with:
       package_manager: npm
       build_command: npm run build
