@@ -4,9 +4,9 @@
   "description": "Todo Application using Node and Express JS",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm i",
-    "test": "jest --coverage --coverageReporters='json-summary' --coverageReporters='lcov'"
+    "test": "jest --coverage --coverageReporters='json-summary' --coverageReporters='lcov'",
+    "lint": "echo lint...."
   },
   "repository": {
     "type": "git",
