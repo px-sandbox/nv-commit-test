@@ -4,8 +4,8 @@
   "description": "Todo Application using Node and Express JS",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "build": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build",
     "test": "jest --coverage --coverageReporters='json-summary' --coverageReporters='lcov'"
   },
   "repository": {
@@ -28,7 +28,7 @@
         }
       ]
     ]
-  }
+  },
   "homepage": "https://github.com/cmevawala/nodejs-todo-app#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
