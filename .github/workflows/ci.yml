@@ -19,8 +19,8 @@ jobs:
       build_command: npm run build
       lint_command: npm run lint
       excluded_jobs: docker
-      # test_coverage_report_directory: coverage
+      test_coverage_report_directory: coverage
       run_dev_test: true
       dev_test_branch: main
-      # send_test_coverage_report_to_pulse: true
+      send_test_coverage_report_to_pulse: true
       PULSE_URL: https://0bnrigh465.execute-api.eu-west-1.amazonaws.com
