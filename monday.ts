@@ -10,3 +10,5 @@ if (isWeekday(today)) {
 } else {
   console.log("It's the weekend!");
 }
+
+
