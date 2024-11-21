@@ -1,0 +1,27 @@
+name: CI
+on:
+  pull_request: {
+    types: [opened, synchronize, reopened, closed]
+  }
+  issue_comment:
+jobs:
+  call-workflow:
+    uses: studiographene/github-action-workflows/.github/workflows/nodejs-ci.yml@feature/PX-1850 # if you want alternatively pin to tag version version
+    secrets: inherit
+    permissions:
+      discussions: write
+      issues: write
+      pull-requests: write
+      security-events: write
+      contents: read
+    with:
+      package_manager: npm
+      build_command: npm run build
+      lint_command: npm run lint
+      excluded_jobs: docker
+      dev_test_coverage_report_directory: coverage
+      run_dev_test: true
+      dev_test_branch: main
+      send_dev_test_coverage_report_to_pulse: true
+      PULSE_URL: https://stealth-helpful-basket.glitch.me
+      #PULSE_URL: https://0bnrigh465.execute-api.eu-west-1.amazonaws.com

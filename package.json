@@ -4,7 +4,9 @@
   "description": "Todo Application using Node and Express JS",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm i",
+    "test": "jest --coverage --coverageReporters='json-summary' --coverageReporters='lcov'",
+    "lint": "echo lint...."
   },
   "repository": {
     "type": "git",
@@ -15,12 +17,28 @@
   "bugs": {
     "url": "https://github.com/cmevawala/nodejs-todo-app/issues"
   },
+   "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "coverage",
+          "outputName": "report.xml"
+        }
+      ]
+    ]
+  },
   "homepage": "https://github.com/cmevawala/nodejs-todo-app#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "crypto-js": "^4.2.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
-    "mongoose": "^4.10.8"
+    "mongoose": "^4.10.8",
+    "lodash": "^4.17.21",
+    "@types/lodash": "^4.14.201",
+     "jest": "^29.7.0",
+    "jest-junit": "^13.2.0"
   }
 }
