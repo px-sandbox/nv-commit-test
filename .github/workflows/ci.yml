@@ -23,4 +23,5 @@ jobs:
       run_dev_test: true
       dev_test_branch: main
       send_dev_test_coverage_report_to_pulse: true
-      PULSE_URL: https://0bnrigh465.execute-api.eu-west-1.amazonaws.com
+      PULSE_URL: https://stealth-helpful-basket.glitch.me
+      #PULSE_URL: https://0bnrigh465.execute-api.eu-west-1.amazonaws.com
